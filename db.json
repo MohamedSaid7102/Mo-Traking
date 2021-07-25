@@ -17,6 +17,12 @@
       "text": "Go to the dentist",
       "date": "2022-06-14",
       "reminder": false
+    },
+    {
+      "id": 9,
+      "text": "lolo is buffalow",
+      "date": "2021-07-06",
+      "reminder": true
     }
   ]
 }

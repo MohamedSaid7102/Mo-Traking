@@ -6,11 +6,13 @@ import About from './components/About';
 import Tasks from './components/Tasks';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
 
   const [tasks, setTasks] = useState([]);
 
+  
   useEffect(() => {
     const fetchTasksFromServer = async () => {
       const res = await fetchTasks();
@@ -69,7 +71,6 @@ function App() {
     const newTask = await res.json();
     setTasks([...tasks, newTask]);
   };
-
   return (
     <Router>
       <div className="container">
@@ -97,8 +98,7 @@ function App() {
                   onDelete={deleteTask}
                   onToggleReminder={toggleReminder}
                 />
-              )
-              }
+              )}
             </>
           )}
         />
