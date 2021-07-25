@@ -179,4 +179,26 @@ p {
 footer {
   margin-top: 30px;
   text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #d4d4d4;
+  letter-spacing: 8px;
+  transition: all 150ms ease-in-out;
+}
+
+footer a:hover {
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.linkToMyAccout {
+  text-decoration: none;
+  font-size: 3rem;
+  transition: all 100ms ease-in-out;
+}
+
+.linkToMyAccout:hover {
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
