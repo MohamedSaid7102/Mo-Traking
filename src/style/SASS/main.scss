@@ -45,6 +45,7 @@ p {
   border-radius: 5px;
   width: 80vw;
   max-width: 500px;
+  margin-right: 10px;
 }
 
 .header {
@@ -52,7 +53,9 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
   h1 {
     font-size: 5rem;
   }
@@ -134,7 +137,6 @@ p {
   right: -6px;
 }
 
-
 .add-form {
   margin-bottom: 40px;
 }
@@ -190,7 +192,7 @@ footer a:hover {
 
 .linkToMyAccout {
   text-decoration: none;
-  font-size:3rem;
+  font-size: 3rem;
   transition: all 100ms ease-in-out;
 }
 

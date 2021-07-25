@@ -49,6 +49,7 @@ p {
   border-radius: 5px;
   width: 80vw;
   max-width: 500px;
+  margin-right: 10px;
 }
 
 .header {
@@ -56,6 +57,9 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 .header h1 {
   font-size: 5rem;
