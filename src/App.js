@@ -12,7 +12,6 @@ function App() {
 
   const [tasks, setTasks] = useState([]);
 
-  
   useEffect(() => {
     const fetchTasksFromServer = async () => {
       const res = await fetchTasks();
@@ -23,13 +22,13 @@ function App() {
 
   // fetch tasks from server
   const fetchTasks = async () => {
-    const res = await fetch('http://localhost:3001/tasks');
+    const res = await fetch('http://localhost:5000/tasks');
     const data = await res.json();
     return data;
   };
 
   const fetchTask = async (id) => {
-    const res = await fetch(`http://localhost:3001/tasks/${id}`);
+    const res = await fetch(`http://localhost:5000/tasks/${id}`);
     const data = await res.json();
     return data;
   };
@@ -38,7 +37,7 @@ function App() {
   const toggleReminder = async (taskId) => {
     const taskToToggle = await fetchTask(taskId);
     const updatedTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
-    const res = await fetch(`http://localhost:3001/tasks/${taskId}`, {
+    const res = await fetch(`http://localhost:5000/tasks/${taskId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -54,14 +53,14 @@ function App() {
   };
   // to delete the task or not
   const deleteTask = async (id) => {
-    await fetch(`http://localhost:3001/tasks/${id}`, {
+    await fetch(`http://localhost:5000/tasks/${id}`, {
       method: 'DELETE',
     });
     setTasks(tasks.filter((task) => task.id !== id));
   };
   // to Add a new Task
   const addTask = async (task) => {
-    const res = await fetch('http://localhost:3001/tasks/', {
+    const res = await fetch('http://localhost:5000/tasks/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
